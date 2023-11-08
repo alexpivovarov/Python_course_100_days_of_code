@@ -31,3 +31,27 @@ for random_num in range(0, nr_numbers):
 password = letter_part + symb_part + num_part
 
 print(password)
+
+
+
+
+
+
+
+'''
+#better version:
+
+password = ""
+
+for char in range (0, nr_letters):
+  password += random.choice(letters)
+
+for char in range (0, nr_symbols):
+  password += random.choice(symbols)
+
+for char in range (0, nr_numbers):
+  password += random.choice(numbers)
+
+print(password)
+
+'''
