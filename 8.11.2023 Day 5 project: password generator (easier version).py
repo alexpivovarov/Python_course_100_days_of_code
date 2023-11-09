@@ -34,7 +34,7 @@ for random_num in range(0, nr_numbers):
 
 password = letter_part + symb_part + num_part
 
-print(password)
+print(f"Your password is {password}")
 
 
 
@@ -55,6 +55,6 @@ for char in range (0, nr_symbols):
 for char in range (0, nr_numbers):
   password += random.choice(numbers)
 
-print(password)
+print(f"Your password is {password}")
 
 '''
