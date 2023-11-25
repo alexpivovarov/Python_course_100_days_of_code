@@ -36,5 +36,5 @@ def prime_checker(number):
         else:
             print("It's not a prime number.")
 
-n = int(input())  # Check this number
+n = int(input("Type the number to check: "))  # Check this number
 prime_checker(number=n)
