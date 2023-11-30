@@ -4,9 +4,6 @@ import random
 
 number = random.randint(1, 101)
 
-hint = print(number)
-
-
 print("Welcome to the number guessing game.")
 print("I have chosen a number between 1 and 100. Try to guess it!")
 
