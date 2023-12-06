@@ -89,6 +89,7 @@ is_on = True
 
 while is_on:
     choice = input("What would you like? (espresso/latte/cappuccino): ")
+    #This command is for maintainers
     if choice == "off":
         is_on = False
     elif choice == "report":
