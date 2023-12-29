@@ -1,7 +1,6 @@
 # Conditions for a leap year:
-# every year that is divisible by 4 with no remainder
-# except every year that is evenly divisible by 100 with no remainder
-# unless the year is also divisible by 400 with no remainder
+# A year is a leap year if it is divisible by 4.
+# However, if the year is also divisible by 100, it is not a leap year unless it is divisible by 400.
 
 
 def is_leap(year):
