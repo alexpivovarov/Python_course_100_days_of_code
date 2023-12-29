@@ -1,3 +1,5 @@
+import random
+
 rock = '''
     _______
 ---'   ____)
@@ -27,7 +29,6 @@ scissors = '''
 
 
 
-
 user_decision = int(input('What is your choice? Enter 0 for rock, 1 for paper, 2 for scissors\n'))
 
 
@@ -46,7 +47,6 @@ else:
 print()
 print()
 
-import random
 
 comp_decision = random.randint(0, 2)
 
