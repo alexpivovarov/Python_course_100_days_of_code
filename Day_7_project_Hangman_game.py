@@ -14,7 +14,6 @@ lives = 6
 
 
 # Creating blanks
-
 display = []
 for _ in range(word_length):
     display += "_"
