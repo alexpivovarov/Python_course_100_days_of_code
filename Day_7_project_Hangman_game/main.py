@@ -28,24 +28,26 @@ while not end_of_game:
     # Checking guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
+        print("Correct!")
+
         
         if letter == guess:
           display[position] = letter
 
     #Checking if user is wrong.
     if guess not in chosen_word:
-        #If the letter is not in the chosen_word
-        print(f"You guessed {guess}, that's not in the word. You lose a life.")
+        print(f"You guessed {guess}, that's not in the word. You have lost a life.")
         
         lives -= 1
         if lives == 0:
             end_of_game = True
-            print("You have lost")
+            print("You have lost.")
+            print(f"Correct word was {chosen_word}.")
 
     #Joining all the elements in the list and turning it into a string.
     print(f"{' '.join(display)}")
 
-    #Checking if user has got all letters.
+    #Checking if user has got all letters correct.
     if "_" not in display:
         end_of_game = True
         print("You have won!")
