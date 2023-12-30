@@ -5,13 +5,14 @@ is_race_on = False
 
 screen = Screen()
 screen.setup(width=500, height=400)
-user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Type a color: ")
+user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Type a color (red / orange / yellow / green / blue / purple): ")
 print(user_bet)
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 y_positions = [-100, -50, 0, 50, 100, 150]
 all_turtles = []
 
 
+# Aligning turtles at the left edge
 for turtle_index in range(0, 6):
     new_turtle = Turtle(shape="turtle")
     new_turtle.penup()
@@ -23,8 +24,7 @@ for turtle_index in range(0, 6):
 if user_bet:
     is_race_on = True
 
-# Creating user_bet we prevent the loop from starting while user makes the bet
-
+# By creating user_bet if statement we prevent the loop from starting while user still makes the bet.
 while is_race_on:
 
     for turtle in all_turtles:
