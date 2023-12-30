@@ -18,15 +18,6 @@ operations = {
 }
 
 
-# Update 17.12.23:  We may use functions as an input of one higher-order function
-# def calculator(n1, n2, func):
-#   return func(n1, n2)
-
-# example
-# result = calculator (2, 3, multiply)
-# result is 6
-
-
 
 
 def calculator():
@@ -56,3 +47,14 @@ def calculator():
       calculator()
 
 calculator()
+
+
+# Update 17.12.23:  We may use 4 arithmetic functions as inputs of one higher-order function.
+# def calculator(n1, n2, func):
+#   return func(n1, n2)
+
+# example
+# result = calculator (2, 3, multiply)
+# result is 6
+
+
