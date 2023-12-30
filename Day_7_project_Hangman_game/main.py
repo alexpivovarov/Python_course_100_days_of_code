@@ -28,11 +28,12 @@ while not end_of_game:
     # Checking guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
-        print("Correct!")
 
         
         if letter == guess:
           display[position] = letter
+                print("Correct!")
+
 
     #Checking if user is wrong.
     if guess not in chosen_word:
