@@ -1,36 +1,55 @@
-from turtle import Screen, Turtle
+from turtle import Screen, Turtle # importing "screen" class and "turtle" class from the "turtle" module
+from paddle import Paddle
+from ball import Ball
+from scoreboard import Scoreboard
+import time
 
-screen = Screen()
-screen.bgcolor("black")
+screen = Screen() # create screen object from "screen" class
+screen.bgcolor("black") # set background colour to black
 screen.setup(width=800, height=600)
 screen.title("Pong")
-screen.tracer(0)
+screen.tracer(0)  # disabling the automatic updating of the screen
 
 
-paddle = Turtle()
-paddle.shape("square")
-paddle.color("white")
-paddle.shapesize(stretch_wid=5, stretch_len=1) # making a square 20 * 5 = 100 pixels wide, 20 * 1 = 20 pixels long. (square is initially 20 x 20 size)
-paddle.penup()
-paddle.goto(350, 0) # making the turtle go to the right edge
+# Create the paddles, ball and scoreboard
+r_paddle = Paddle((350, 0))
+l_paddle = Paddle((-350, 0))
+ball = Ball()
+scoreboard = Scoreboard()
 
-def go_up():
-    new_y = paddle.ycor() + 20
-    paddle.goto(paddle.xcor(),new_y)
 
-def go_down():
-    new_y = paddle.ycor() - 20
-    paddle.goto(paddle.xcor(),new_y)
-
+# Set up keyboard event handling
 screen.listen()
-screen.onkey(go_up, "Up") # go_up function will be called whenever "Up" key is pressed)
-screen.onkey(go_down, "Down") # go_down function will be called whenever "Down" key is pressed)
+screen.onkey(r_paddle.go_up, "Up") # bind a "go_up" function to a specific key press event (the "Up" arrow key)
+screen.onkey(r_paddle.go_down, "Down")
+screen.onkey(l_paddle.go_up, "w")
+screen.onkey(l_paddle.go_down, "s")
 
+
+# Main game loop
 game_is_on = True
 while game_is_on:
-    screen.update
+    time.sleep(ball.move_speed) # the lower the sleep time the faster the ball moves
+    screen.update()  # Update the screen with all the changes made in this loop iteration
+    ball.move() # Move the ball to its new position
 
-# At line 7 animation is turned off. Paddle is being created in the background. Then due to lines 29-31 screen is updated and paddle appears at the right edge. By doing so we skip animation of paddle going to the right edge.
+    # Detect collision with wall
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_y()
 
+    # Detect collision with paddle
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:  # if ball has travelled far enough to the right or left and is within 50 pixels distance to the paddle
+        ball.bounce_x()
 
+    # Detect right paddle missed
+    if ball.xcor() > 380:
+        ball.reset_position()
+        scoreboard.l_point()
+
+    # Detect left paddle missed
+    if ball.xcor() < -380:
+        ball.reset_position()
+        scoreboard.r_point()
+
+# Keep the window open until it is clicked
 screen.exitonclick()
