@@ -1,1 +1,5 @@
 In this project I have created a code in main.py that automates creation of letters where [name] is changed by each name of a guest in invited_names file 
+
+Skills learned:
+understanding relative and absolute file paths.
+opening, reading, changing files using "with" keyword
