@@ -3,3 +3,7 @@ In this project I have created a code in main.py that automates creation of lett
 Skills learned:
 understanding relative and absolute file paths.
 opening, reading, changing files using "with" keyword
+
+python string replace() method, 
+python string strip() method,
+puthon file readlines() method
