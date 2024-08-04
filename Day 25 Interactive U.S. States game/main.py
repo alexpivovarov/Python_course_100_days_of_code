@@ -20,7 +20,7 @@ while len(guessed_states) < 50:
         unguessed_states = []
         for state in all_states:
             if state not in guessed_states:
-                unguessed_states.append(state)
+                unguessed_states.append(state) # Adding missing states to a list of unguessed states
         new_data = pandas.DataFrame(unguessed_states) # creating one column data frame
         new_data.to_csv("states_to_learn.csv") # creating new csv file
         break
@@ -34,4 +34,10 @@ while len(guessed_states) < 50:
         t.write(state_data.state.item()) # Write the name of the state at the turtle's current location (Getting the state name from the row corresponding to the matching state)
 
 
+# The following 3 lines of code can be replaced with only one line of code using list comprehension
+#  for state in all_states:
+#            if state not in guessed_states:
+#                unguessed_states.append(state) # Adding missing states to a list of unguessed states
+#
+#unguessed_states = [state for state in all_states if state not in guessed_states]
 
