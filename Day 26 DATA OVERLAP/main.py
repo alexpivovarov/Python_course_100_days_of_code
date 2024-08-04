@@ -1,3 +1,5 @@
+#  List called result contains the numbers that are common in both files.
+
 file_1 = open("file1.txt", "r")
 list1 = file_1.readlines()
 
