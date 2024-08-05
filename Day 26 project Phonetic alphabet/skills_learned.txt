@@ -1,0 +1,3 @@
+creating lists using list comprehension
+creating directories using directory comprehension
+iterating over Pandas DataFrame
