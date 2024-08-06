@@ -1,0 +1,3 @@
+Creating simple graphical user interface (GUI) using python Tkinter library (creating windows, labels, buttons, working with layout managers)
+
+Working with functions that have positional and keyword arguments
