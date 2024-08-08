@@ -1,0 +1,7 @@
+creating user interface practiced (working with canvas widgets in Tkinter)
+global variables practiced
+developing logic of timer with fucntions, loops, variables
+
+after_cancel method learned
+PhotoImage method for storing image objects learned 
+concept of dynamic typing learned
