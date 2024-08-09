@@ -5,3 +5,7 @@ adding dialog boxes and pop-ups for better user experience
 opening files and appending data into it from entries
 
 clearing entries by deleting information
+
+inserting data in entries using insert() method
+
+working with list comprehension
