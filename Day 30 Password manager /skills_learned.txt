@@ -1,3 +1,0 @@
-Error handling practiced using "try, except, else" method 
-
-Workig with json files practiced
