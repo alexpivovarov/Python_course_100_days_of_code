@@ -1,0 +1,2 @@
+error handling using (try, except, else) statement practiced
+opening, reading, parsing JSON files
