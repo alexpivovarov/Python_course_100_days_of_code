@@ -1,0 +1,4 @@
+Working with pandas library
+Setting up user interface
+using "try, except, else" method for error handling
+developing logic of the application
