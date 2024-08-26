@@ -1,4 +1,4 @@
-I had started learning with course "100 days of Python" by Dr. Angela Yu at the 25th of October and achieved approximately intermediate level. 
+I started learning with the course "100 days of Python" by Dr. Angela Yu at the 25th of October and achieved an intermediate level. 
 
 I worked in IDE PyCharm and then copied files to GitHub.
 
