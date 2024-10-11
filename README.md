@@ -1,4 +1,4 @@
-I started learning with the course "100 days of Python" by Dr. Angela Yu on October 25th 2023 and achieved an intermediate level.
+I started learning with the course "100 days of Python" by Dr. Angela Yu on October 25th 2023.
 
 I worked in the IDE PyCharm and then copied the files to GitHub.
 
