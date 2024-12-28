@@ -1,7 +1,7 @@
 import pandas
 
 data = pandas.read_csv("C:/Users/Александр/PycharmProjects/Day25/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv") # reading data
-grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"]) # counting the number of rowsin the 'data' dataframe where the column "Primary Fur Color" equals "Gray"
+grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"]) # counting the number of rows in the 'data' dataframe where the column "Primary Fur Color" equals "Gray"
 black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"]) 
 cinnamon_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
 print(len(data[data["Primary Fur Color"] == "Gray"]))
